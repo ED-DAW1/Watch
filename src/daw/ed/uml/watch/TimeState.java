@@ -19,18 +19,19 @@ public class TimeState implements WatchState {
 
     @Override
     public void BR() throws Exception {
-        //System.out.print("Baking the pizza...");
-        //pizza.setState(pizza.getBakedState());
+        throw new Exception("Operation not valid");
     }
 
     @Override
     public void BA() throws Exception {
-        throw new Exception("Can't deliver a pizza not baked yet");
+        System.out.println("Set Time Mode");
+        watch.setState(watch.getSetTimeState());
     }
     
     @Override
     public void BM() throws Exception {
-        throw new Exception("Can't deliver a pizza not baked yet");
+        System.out.println("Alarm Mode");
+        watch.setState(watch.getAlarmState());
     }
 
 }

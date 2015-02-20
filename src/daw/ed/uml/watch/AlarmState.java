@@ -19,18 +19,20 @@ public class AlarmState implements WatchState {
 
     @Override
     public void BR() throws Exception {
-        //System.out.print("Baking the pizza...");
-        //pizza.setState(pizza.getBakedState());
+        System.out.println("Alarm toogle");
+        //watch.alarmToogle();
     }
 
     @Override
     public void BA() throws Exception {
-        throw new Exception("Can't deliver a pizza not baked yet");
+        System.out.println("Set Alarm Mode");
+        watch.setState(watch.getSetAlarmState());
     }
     
     @Override
     public void BM() throws Exception {
-        throw new Exception("Can't deliver a pizza not baked yet");
+        System.out.println("Stopwatch mode");
+        watch.setState(watch.getStopWatchState());
     }
 
 }

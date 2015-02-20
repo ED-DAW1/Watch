@@ -24,7 +24,7 @@ class Watch
         m_current_state = new TimeState(this);
     }
     
-    public void set_state(WatchState s)
+    public void setState(WatchState s)
     {
         m_current_state = s;
     }

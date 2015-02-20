@@ -9,28 +9,29 @@ package daw.ed.uml.watch;
  *
  * @author carlos
  */
-public class setTimeState implements WatchState {
+public class SetAlarmState implements WatchState {
 
     private Watch watch;
 
-    public setTimeState(Watch watch) {
+    public SetAlarmState(Watch watch) {
         this.watch = watch;
     }
 
     @Override
     public void BR() throws Exception {
-        //System.out.print("Baking the pizza...");
-        //pizza.setState(pizza.getBakedState());
+        System.out.println("Setting up alarm time");
+        //watch.timeIncrement();
     }
 
     @Override
     public void BA() throws Exception {
-        throw new Exception("Can't deliver a pizza not baked yet");
+        System.out.println("Alarm mode");
+        watch.setState(watch.getAlarmState());
     }
     
     @Override
     public void BM() throws Exception {
-        throw new Exception("Can't deliver a pizza not baked yet");
+        throw new Exception("Function not yet implemented");
     }
 
 }

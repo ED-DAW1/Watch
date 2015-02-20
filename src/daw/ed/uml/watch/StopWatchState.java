@@ -19,18 +19,20 @@ public class StopWatchState implements WatchState {
 
     @Override
     public void BR() throws Exception {
-        //System.out.print("Baking the pizza...");
-        //pizza.setState(pizza.getBakedState());
+        System.out.println("On/Off stopwatch");
+        //watch.alarmToogle();
     }
 
     @Override
     public void BA() throws Exception {
-        throw new Exception("Can't deliver a pizza not baked yet");
+        System.out.println("Restart stopwatch");
+        //watch.restart();
     }
     
     @Override
     public void BM() throws Exception {
-        throw new Exception("Can't deliver a pizza not baked yet");
+        System.out.println("Time mode");
+        watch.setState(watch.getTimeState());
     }
 
 }
