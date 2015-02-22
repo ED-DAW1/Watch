@@ -34,5 +34,10 @@ public class StopWatchState implements WatchState {
         System.out.println("Time mode");
         watch.setState(watch.getTimeState());
     }
+    
+    @Override
+    public String toString() {
+        return "StopWatchState";
+    }
 
 }

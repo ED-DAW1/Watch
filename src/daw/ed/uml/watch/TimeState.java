@@ -33,5 +33,10 @@ public class TimeState implements WatchState {
         System.out.println("Alarm Mode");
         watch.setState(watch.getAlarmState());
     }
+    
+    @Override
+    public String toString() {
+        return "TimeState";
+    }
 
 }

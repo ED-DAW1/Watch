@@ -34,4 +34,9 @@ public class SetTimeState implements WatchState {
         throw new Exception("Function not yet implemented");
     }
     
+    @Override
+    public String toString() {
+        return "SetTimeState";
+    }
+    
 }

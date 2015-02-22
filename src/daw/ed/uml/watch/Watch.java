@@ -21,12 +21,32 @@ class Watch
     
     public Watch()
     {
+        alarmState = new AlarmState(this);
+        stopWatchState = new StopWatchState(this);
+        timeState = new TimeState(this);
+        setTimeState = new SetTimeState(this);
+        setAlarmState = new SetAlarmState(this);
         m_current_state = new TimeState(this);
     }
     
     public void setState(WatchState s)
     {
         m_current_state = s;
+    }
+    
+    public void BM() throws Exception {
+        m_current_state.BM();
+        System.out.format("[%s]", m_current_state);
+    }
+    
+    public void BR() throws Exception {
+        m_current_state.BR();
+        System.out.format("[%s]", m_current_state);
+    }
+    
+    public void BA() throws Exception {
+        m_current_state.BA();
+        System.out.format("[%s]", m_current_state);
     }
     
     public WatchState getAlarmState() {

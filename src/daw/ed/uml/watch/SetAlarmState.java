@@ -33,5 +33,10 @@ public class SetAlarmState implements WatchState {
     public void BM() throws Exception {
         throw new Exception("Function not yet implemented");
     }
+    
+    @Override
+    public String toString() {
+        return "SetAlarmState";
+    }
 
 }

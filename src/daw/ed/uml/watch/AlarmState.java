@@ -34,5 +34,10 @@ public class AlarmState implements WatchState {
         System.out.println("Stopwatch mode");
         watch.setState(watch.getStopWatchState());
     }
+    
+    @Override
+    public String toString() {
+        return "AlarmState";
+    }
 
 }
